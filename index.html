@@ -9,14 +9,6 @@
 		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
 		<link rel="stylesheet" href="reveal.js/dist/theme/solarized.css" id="theme">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -246,6 +238,7 @@
         width: "100%",
       	height: "100%",
       	margin: 0.1,
+				hash: true,
 				dependencies: [
 					{ src: 'reveal.js/plugin/markdown/marked.js' },
 					{ src: 'reveal.js/plugin/markdown/markdown.js' },
