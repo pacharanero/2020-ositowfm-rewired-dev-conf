@@ -6,8 +6,10 @@
 
 		<title>2020-open-source-is-the-only-way-for-medicine@rewired-dev-conf</title>
 
-		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
-		<link rel="stylesheet" href="reveal.js/dist/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
 
 	</head>
 	<body>
@@ -228,24 +230,22 @@
 			</div>
 		</div>
 
-		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
 
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-        width: "100%",
-      	height: "100%",
-      	margin: 0.1,
-				hash: true,
-				dependencies: [
-					{ src: 'reveal.js/plugin/markdown/marked.js' },
-					{ src: 'reveal.js/plugin/markdown/markdown.js' },
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
+				Reveal.initialize({
+	        width: "100%",
+	      	height: "100%",
+	      	margin: 0.1,
+					hash: true,
+					plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+				});
 		</script>
 	</body>
 </html>
